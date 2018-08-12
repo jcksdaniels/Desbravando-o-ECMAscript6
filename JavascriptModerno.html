@@ -1,0 +1,57 @@
+@!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+
+
+    <button id="btn">Make my sandwich! </button>
+    <script>
+
+        const  Australia = ["Sydney", "Melbourne", "Perth"];
+
+        const love = Australia.map(function(name){
+            return `I love ${name}`;
+        });
+        
+
+       const LoveArrow = Australia.filter(name => name ==='Sydney')
+                                 .map(name => `I love ${name}`)
+       console.log(LoveArrow)
+
+
+
+
+// Outros exemplos com a Arrow Function
+
+
+const sandwich ={
+
+    bread: 'white',
+    cheese: 'chedar',
+
+    prepare: function(){
+        return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese` 
+    },
+
+    make: function(){
+        window.setTimeout(() => {
+            console.log(this.prepare());
+        }, 500);
+    }
+   };
+
+   const btn = document.getElementById('btn');
+   btn.addEventListener('click',function() {sandwich.make()});
+
+    </script>
+          
+    
+
+</body>
+</html>
